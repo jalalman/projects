@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style1.css')}}">
+</head>
+<body>
+    <div class="contianer">
+        <h1>Submitted Info</h1>
+        <div>
+            <label>name</label>
+            <span>{{name}}</span>
+        </div>
+        <div>
+            <label>location</label>
+            <span>{{location}}</span>
+        </div>
+        <div>
+            <label>language</label>
+            <span>{{lang}}</span>
+        </div>
+        <div>
+            <label>Gender</label>
+            <span>{{gender}}</span>
+        </div>
+        <div>
+            <label>job</label>
+            <span>
+                {% for job in jobs%}
+                    *{{job}}
+                {% endfor %}
+            </span>
+        </div>
+        <div>
+            <label>text</label>
+            <span>{{text}}</span>
+        </div>
+    </div>
+</body>
+</html>
