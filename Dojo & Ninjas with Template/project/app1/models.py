@@ -36,3 +36,7 @@ def getAllNinja():
 def deleteDojo(id):
     temp = Dojo.objects.get(id=id)
     temp.delete()
+
+def deleteNinja(id):
+    temp = Ninja.objects.get(id=id)
+    temp.delete()

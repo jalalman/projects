@@ -27,3 +27,8 @@ def delete(request,id):
     models.deleteDojo(id)
 
     return redirect('/')
+
+def deleten(request,id):
+    models.deleteNinja(id)
+
+    return redirect('/')

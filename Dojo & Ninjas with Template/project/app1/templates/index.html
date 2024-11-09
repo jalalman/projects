@@ -49,7 +49,7 @@
                 {% for i in dojos %}
                 <h3>Ninjas at {{i.name}} <a href="{% url 'delete' i.id %}">delete</a> </h3>
                 {% for k in i.ninjas.all %}
-                    <li>{{k.first_name}} {{k.last_name}}</li>
+                    <li>{{k.first_name}} {{k.last_name}} <a href="{% url 'deleten' k.id %}">delete</a></li>
                 {% endfor %}
                 {% endfor %}
 
